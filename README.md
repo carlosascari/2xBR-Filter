@@ -57,7 +57,7 @@ Copy n' Pasta Example:
 <html>
   <head>
   	<title>xBR Filter 0.2.5</title>
-		<script type="text/javascript" src="xbr-0.2.5.js"></script>
+		<script type="text/javascript" src="2xbr-0.2.5.js"></script>
 	</head>
   
 	<body>
@@ -69,7 +69,7 @@ Copy n' Pasta Example:
       window.onload = function(){
         /*Load Original Image*/
       	var image = new Image();
-      	image.src="xbr.png";
+      	image.src="image.png";
         
       	/*When image loads...*/
       	image.onload =  function(e){
