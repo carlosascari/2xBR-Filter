@@ -13,6 +13,9 @@ http://board.byuu.org/viewtopic.php?f=10&t=2248
 
 There he explains how the algorithm works as well as some optional implementations.
 
+**UPDATE**
+Forum post is down, you can find it in [archive.org](http://web.archive.org/web/20140729022435/http://board.byuu.org/viewtopic.php?f=10&t=2248)
+
 
 Todo's:
 * Let user choose scaling factor: 2x,3x,5x, etc.
