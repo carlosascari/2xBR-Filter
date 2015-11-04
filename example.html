@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>xBR Sample</title>
+</head>
+<body>
+<strong id='working'>Processing, be patient..</strong>
+<script type="text/javascript" src="xbr.js"></script>
+<script type="text/javascript">	
+var image = new Image()
+image.src = 'ff4.png'
+image.onload =  function img_loaded()
+{
+var canvas  = document.createElement('canvas')
+var canvas2 = document.createElement('canvas')
+var canvas3 = document.createElement('canvas')
+var canvas4 = document.createElement('canvas')
+document.body.appendChild(canvas)
+document.body.appendChild(canvas2)
+document.body.appendChild(canvas3)
+document.body.appendChild(canvas4)
+var ctx  = canvas.getContext('2d')
+var ctx2 = canvas2.getContext('2d')
+var ctx3 = canvas3.getContext('2d')
+var ctx4 = canvas4.getContext('2d')
+canvas.width   = image.width
+canvas.height  = image.height
+canvas2.width  = canvas.width * 2
+canvas2.height = canvas.height * 2
+canvas3.width  = canvas2.width * 2
+canvas3.height = canvas2.height * 2
+canvas4.width  = canvas3.width * 2
+canvas4.height = canvas3.height * 2
+
+// Draw original image onto first canvas.
+ctx.drawImage(image, 0, 0)
+
+// Scaled 2x
+console.time('bench original to 2x')
+var result = xBR(ctx, 0, 0, canvas.width, canvas.height)
+console.timeEnd('bench original to 2x')
+ctx2.putImageData(result, 0 ,0)
+
+// Scaled 4x
+console.time('bench 2x to 4x')
+var result = xBR(ctx2, 0, 0, canvas2.width, canvas2.height)
+console.timeEnd('bench 2x to 4x')
+ctx3.putImageData(result, 0 ,0)
+
+// Scaled 8x
+// console.time('bench 4x to 8x')
+// var result = xBR(ctx3, 0, 0, canvas3.width, canvas3.height)
+// console.timeEnd('bench 4x to 8x')
+// ctx4.putImageData(result, 0 ,0)
+
+document.getElementById('working').style.display = 'none'
+}	
+</script>
+</body>
+</html>
