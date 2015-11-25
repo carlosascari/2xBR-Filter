@@ -10,7 +10,7 @@
 * much more readable.
 *
 * @version 0.3.0
-* @author Ascari <carlos.ascari.x@gmail.com
+* @author Ascari <carlos.ascari.x@gmail.com>
 */
 var xBR = (function () {
 "use strict"
@@ -201,13 +201,13 @@ function execute(context, srcX, srcY, srcW, srcH)
 		for (var y = 0; y < srcH; ++y)
 		{
 			/* Matrix: 10 is (0,0) i.e. current pixel.
-					-2 | -1|  0| +1| +2 	(x)
+				-2 | -1|  0| +1| +2 	(x)
 			______________________________
-			-2 |		[ 0][ 1][ 2]
+			-2 |	    [ 0][ 1][ 2]
 			-1 |	[ 3][ 4][ 5][ 6][ 7]
 			 0 |	[ 8][ 9][10][11][12]
 			+1 |	[13][14][15][16][17]
-			+2 |		[18][19][20]
+			+2 |	    [18][19][20]
 			(y)|
 			*/
 			matrix[ 0].value = oPixelView[coord2index(x-1, y-2)]
@@ -235,9 +235,9 @@ function execute(context, srcX, srcY, srcW, srcH)
 			// Calculate color weights using 2 points in the matrix
 			var d_10_9 	= d(matrix[10], matrix[9])
 			var d_10_5 	= d(matrix[10], matrix[5])
-			var d_10_11 = d(matrix[10], matrix[11])
-			var d_10_15 = d(matrix[10], matrix[15])
-			var d_10_14 = d(matrix[10], matrix[14])
+			var d_10_11  	= d(matrix[10], matrix[11])
+			var d_10_15 	= d(matrix[10], matrix[15])
+			var d_10_14 	= d(matrix[10], matrix[14])
 			var d_10_6 	= d(matrix[10], matrix[6])
 			var d_4_8 	= d(matrix[4],  matrix[8])
 			var d_4_1 	= d(matrix[4],  matrix[1])
@@ -247,20 +247,20 @@ function execute(context, srcX, srcY, srcW, srcH)
 			var d_5_11 	= d(matrix[5],  matrix[11])
 			var d_5_0 	= d(matrix[5],  matrix[0])
 			var d_10_4 	= d(matrix[10], matrix[4])
-			var d_10_16 = d(matrix[10], matrix[16])
+			var d_10_16 	= d(matrix[10], matrix[16])
 			var d_6_12 	= d(matrix[6],  matrix[12])
 			var d_6_1	= d(matrix[6],  matrix[1])
-			var d_11_15 = d(matrix[11], matrix[15])
+			var d_11_15 	= d(matrix[11], matrix[15])
 			var d_11_7 	= d(matrix[11], matrix[7])
 			var d_5_2 	= d(matrix[5],  matrix[2])
 			var d_14_8 	= d(matrix[14], matrix[8])
-			var d_14_19 = d(matrix[14], matrix[19])
-			var d_15_18 = d(matrix[15], matrix[18])
+			var d_14_19 	= d(matrix[14], matrix[19])
+			var d_15_18 	= d(matrix[15], matrix[18])
 			var d_9_13 	= d(matrix[9],  matrix[13])
-			var d_16_12 = d(matrix[16], matrix[12])
-			var d_16_19 = d(matrix[16], matrix[19])
-			var d_15_20 = d(matrix[15], matrix[20])
-			var d_15_17 = d(matrix[15], matrix[17])
+			var d_16_12 	= d(matrix[16], matrix[12])
+			var d_16_19 	= d(matrix[16], matrix[19])
+			var d_15_20 	= d(matrix[15], matrix[20])
+			var d_15_17 	= d(matrix[15], matrix[17])
 
 			// Top Left Edge Detection Rule
 			var a1 = (d_10_14 + d_10_6 + d_4_8  + d_4_1 + (4 * d_9_5))
